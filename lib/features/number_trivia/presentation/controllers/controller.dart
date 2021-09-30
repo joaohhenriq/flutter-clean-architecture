@@ -20,7 +20,7 @@ class Controller extends GetxController {
     required this.inputConverter,
   });
 
-  String message = '';
+  String message = 'Start searching';
   bool isLoading = false;
 
   void _updateMessage(String value) {

@@ -59,8 +59,8 @@ void _initCore() {
 }
 
 Future<void> _initExternal() async {
-  final sharedPreferences = await SharedPreferences.getInstance();
-  di.registerLazySingleton(() => sharedPreferences);
+  SharedPreferences? prefs = await SharedPreferences.getInstance();
+  di.registerLazySingleton(() => prefs);
   di.registerLazySingleton(() => http.Client());
   di.registerLazySingleton(() => Connectivity());
 }
